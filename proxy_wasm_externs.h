@@ -191,3 +191,8 @@ extern "C" void proxy_on_log(uint32_t context_id);
 // The Context in the proxy has been destroyed and no further calls will be
 // coming.
 extern "C" void proxy_on_delete(uint32_t context_id);
+
+// Request Tracing
+extern "C" WasmResult proxy_set_active_span_tag(const char* key_ptr, size_t key_size, const char* value_ptr,
+                                         size_t value_size);
+
